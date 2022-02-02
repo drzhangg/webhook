@@ -15,5 +15,11 @@ func main() {
 	})
 
 
+	r.POST("/post", func(c *gin.Context) {
+		fmt.Println("header:",c.Request.Header)
+		fmt.Println("Body:",c.Request.Body)
+	})
+
+
 	r.Run(":8989")
 }
